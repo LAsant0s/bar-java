@@ -21,7 +21,32 @@ public class Program {
 
 		System.out.print("Quantidade de espetinhos: ");
 		int espetinhos = sc.nextInt();
+		
+		//cálculo dos dados
+		double consumo = cerveja * 5 + refri * 3 + espetinhos * 7;
+		System.out.println();	
+		
+		//impressão do relatório
+		System.out.println("RELATÓRIO:");
+		System.out.printf("Consumo = %.2f\n", consumo);
+		if (consumo > 30) {
+			couvert = 0.0;
+			System.out.println("Isento de Couvert");
+		} else {
+			couvert = 4.00;
+			System.out.printf("Couvert = %.2f\n", couvert);
+		}
+		if (sexo == 'M') {
+			ingresso = 10.00;
+		} else {
+			ingresso = 8.00;
+		}
+		System.out.printf("Ingresso = R$ %.2f\n\n", ingresso);
+
+		System.out.printf("Valor a pagar = R$ %.2f\n", (consumo + couvert + ingresso));
 
 	}
 
 }
+
+
